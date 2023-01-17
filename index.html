@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container my-2 py-4 border-bottom  ">
+        <h2 class="fs-2 fw-bold  ">Bookmarker</h2>
+    </header>
+
+
+    <section class="container text-center my-5 py-3 bg-light rounded-3  ">
+        <p class="fs-3 fw-bold">Bookmark your favorite sites </p>
+        <div class="text-center">
+            <label for="namesite" class="my-2 fw-bold fs-4" >Name Site</label>
+            <input id="namesite" onkeyup="validName()" type="text" placeholder="Name Site" class="form-control w-75 m-auto border-dark " > 
+            <P class="text-danger d-none" id="validName">please enter your name site (at least 2 chrachter)</P>
+        </div>
+        <div class="text-center my-4">
+            <label for="SiteUrl" class="my-2 fw-bold fs-4" > Site URL</label>
+            <input id="SiteUrl" onkeyup="validURL()" type="text" placeholder="URL Site" class="form-control w-75 m-auto border-dark "> 
+            <P class="text-danger d-none" id="validURL">please enter your  valid URL (start with https://)</P>
+
+        </div>
+        <button class="btn-info btn mt-2 mb-5  btn fw-bold"  id="submit">Submit</button>
+
+        <input type="text" onkeyup="search(this.value)" class="my-3 form-control" placeholder="Search by bookmark name">
+
+        <div id="deleteAll" class="text-center "></div>
+    </section>
+    <div id="showdata">
+    </div>
+  
+    <footer class="container  my-5 py-3 border-top  " >
+        <p class="fs-4 text-muted">©2022 Bookmarker </p>
+    </footer>
+    
+    <script src="JS/script.js"></script>
+</body>
+</html>
